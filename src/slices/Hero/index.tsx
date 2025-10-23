@@ -3,6 +3,8 @@ import { Content } from "@prismicio/client";
 import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
 import { PrismicNextLink } from "@prismicio/next";
 
+import { Bounded } from "@/components/Bounded";
+
 /**
  * Props for `Hero`.
  */
@@ -13,9 +15,10 @@ export type HeroProps = SliceComponentProps<Content.HeroSlice>;
  */
 const Hero: FC<HeroProps> = ({ slice }) => {
   return (
-    <section
+    <Bounded
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
+      className="bg-brand-pink relative h-dvh bg-texture"
     >
       Placeholder component for hero (variation: {slice.variation}) slices.
       <br />
@@ -31,12 +34,12 @@ const Hero: FC<HeroProps> = ({ slice }) => {
        *   }
        * }
        */}
-      <div className="text-[50px] font-bold text-violet-500">
+      <div className="text-[50px] font-bold text-brand-lime">
         <PrismicRichText field={slice.primary.heading} />
       </div>
       <PrismicRichText field={slice.primary.body} />
       <PrismicNextLink field={slice.primary.button} />
-    </section>
+    </Bounded>
   );
 };
 
