@@ -1,0 +1,185 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"heading": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading2",
+						"content": {
+							"text": "Quick"
+						}
+					}
+				]
+			},
+			"body": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Sunt culpa sunt culpa nisi ut occaecat amet quis ea do tempor."
+						}
+					}
+				]
+			},
+			"background_image": {
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1607582278038-6bebbd4d7b72",
+					"width": 4010,
+					"height": 4010
+				},
+				"url": "https://images.unsplash.com/photo-1607582278038-6bebbd4d7b72",
+				"width": 4010,
+				"height": 4010,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"alt": "notice",
+				"credits": null,
+				"__TYPE__": "ImageContent",
+				"thumbnails": {}
+			},
+			"button": {
+				"key": "633246f9-a7dc-4967-8fd8-e7bb94d08892",
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "http://twitter.com",
+					"text": "basis"
+				}
+			},
+			"forground_image": {
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1591012911207-0dbac31f37da",
+					"width": 4000,
+					"height": 4000
+				},
+				"url": "https://images.unsplash.com/photo-1591012911207-0dbac31f37da",
+				"width": 4000,
+				"height": 4000,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"alt": "studying",
+				"credits": null,
+				"__TYPE__": "ImageContent",
+				"thumbnails": {}
+			},
+			"theme": {
+				"__TYPE__": "FieldContent",
+				"value": "Navey",
+				"type": "Select"
+			}
+		},
+		"items": []
+	},
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "imageOnLeft",
+		"primary": {
+			"heading": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading2",
+						"content": {
+							"text": "Apartment"
+						}
+					}
+				]
+			},
+			"body": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Ut consequat sunt enim sit in quis qui officia qui."
+						}
+					}
+				]
+			},
+			"background_image": {
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1587614295999-6c1c13675117",
+					"width": 3810,
+					"height": 5715
+				},
+				"url": "https://images.unsplash.com/photo-1587614295999-6c1c13675117",
+				"width": 3810,
+				"height": 5715,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"alt": "wore",
+				"credits": null,
+				"__TYPE__": "ImageContent",
+				"thumbnails": {}
+			},
+			"button": {
+				"key": "618e51ce-9916-426b-a02b-5cf1380618cc",
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "http://twitter.com",
+					"text": "let"
+				}
+			},
+			"forground_image": {
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
+					"width": 4076,
+					"height": 2712
+				},
+				"url": "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
+				"width": 4076,
+				"height": 2712,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"alt": "famous",
+				"credits": null,
+				"__TYPE__": "ImageContent",
+				"thumbnails": {}
+			},
+			"theme": {
+				"__TYPE__": "FieldContent",
+				"value": "Orange",
+				"type": "Select"
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": []
+			}
+		]
+	}
+]

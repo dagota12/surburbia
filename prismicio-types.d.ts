@@ -445,6 +445,71 @@ export type ProductGridSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Primary content in *TextAndImage → Default → Primary*
+ */
+export interface TextAndImageSliceDefaultPrimary {
+  /**
+   * Heading field in *TextAndImage → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: text_and_image.default.primary.heading
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  heading: prismic.RichTextField;
+
+  /**
+   * Body field in *TextAndImage → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: text_and_image.default.primary.body
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  body: prismic.RichTextField;
+
+  /**
+   * Background Image field in *TextAndImage → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: text_and_image.default.primary.background_image
+   * - **Documentation**: https://prismic.io/docs/fields/image
+   */
+  background_image: prismic.ImageField<never>;
+
+  /**
+   * Button field in *TextAndImage → Default → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: text_and_image.default.primary.button
+   * - **Documentation**: https://prismic.io/docs/fields/link
+   */
+  button: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
+
+  /**
+   * Forground Image field in *TextAndImage → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: text_and_image.default.primary.forground_image
+   * - **Documentation**: https://prismic.io/docs/fields/image
+   */
+  forground_image: prismic.ImageField<never>;
+
+  /**
+   * Theme field in *TextAndImage → Default → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **API ID Path**: text_and_image.default.primary.theme
+   * - **Documentation**: https://prismic.io/docs/fields/select
+   */
+  theme: prismic.SelectField<"Blue" | "Orange" | "Navey" | "Lime" | "Sina">;
+}
+
+/**
  * Default variation for TextAndImage Slice
  *
  * - **API ID**: `default`
@@ -453,14 +518,94 @@ export type ProductGridSlice = prismic.SharedSlice<
  */
 export type TextAndImageSliceDefault = prismic.SharedSliceVariation<
   "default",
-  Record<string, never>,
+  Simplify<TextAndImageSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Primary content in *TextAndImage → image on left → Primary*
+ */
+export interface TextAndImageSliceImageOnLeftPrimary {
+  /**
+   * Heading field in *TextAndImage → image on left → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: text_and_image.imageOnLeft.primary.heading
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  heading: prismic.RichTextField;
+
+  /**
+   * Body field in *TextAndImage → image on left → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: text_and_image.imageOnLeft.primary.body
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  body: prismic.RichTextField;
+
+  /**
+   * Background Image field in *TextAndImage → image on left → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: text_and_image.imageOnLeft.primary.background_image
+   * - **Documentation**: https://prismic.io/docs/fields/image
+   */
+  background_image: prismic.ImageField<never>;
+
+  /**
+   * Button field in *TextAndImage → image on left → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: text_and_image.imageOnLeft.primary.button
+   * - **Documentation**: https://prismic.io/docs/fields/link
+   */
+  button: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
+
+  /**
+   * Forground Image field in *TextAndImage → image on left → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: text_and_image.imageOnLeft.primary.forground_image
+   * - **Documentation**: https://prismic.io/docs/fields/image
+   */
+  forground_image: prismic.ImageField<never>;
+
+  /**
+   * Theme field in *TextAndImage → image on left → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **API ID Path**: text_and_image.imageOnLeft.primary.theme
+   * - **Documentation**: https://prismic.io/docs/fields/select
+   */
+  theme: prismic.SelectField<"Blue" | "Orange" | "Navey" | "Lime">;
+}
+
+/**
+ * image on left variation for TextAndImage Slice
+ *
+ * - **API ID**: `imageOnLeft`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type TextAndImageSliceImageOnLeft = prismic.SharedSliceVariation<
+  "imageOnLeft",
+  Simplify<TextAndImageSliceImageOnLeftPrimary>,
   never
 >;
 
 /**
  * Slice variation for *TextAndImage*
  */
-type TextAndImageSliceVariation = TextAndImageSliceDefault;
+type TextAndImageSliceVariation =
+  | TextAndImageSliceDefault
+  | TextAndImageSliceImageOnLeft;
 
 /**
  * TextAndImage Shared Slice
@@ -514,8 +659,11 @@ declare module "@prismicio/client" {
       ProductGridSliceVariation,
       ProductGridSliceDefault,
       TextAndImageSlice,
+      TextAndImageSliceDefaultPrimary,
+      TextAndImageSliceImageOnLeftPrimary,
       TextAndImageSliceVariation,
       TextAndImageSliceDefault,
+      TextAndImageSliceImageOnLeft,
     };
   }
 }
