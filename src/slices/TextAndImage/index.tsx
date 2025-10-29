@@ -37,7 +37,7 @@ const TextAndImage: FC<TextAndImageProps> = ({ slice, index }) => {
         theme === "Navey" && "bg-texture bg-brand-navy text-white",
         theme === "Orange" && "bg-texture bg-brand-orange text-white",
         theme === "Lime" && "bg-texture bg-brand-lime",
-        "sticky top-[calc(var(--index)*2rem)]"
+        "sticky top-[calc(var(--index)*2rem)] overflow-hidden"
       )}
       style={{
         "--index": index,
