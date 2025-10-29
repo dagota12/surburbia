@@ -45,9 +45,9 @@ const VideoBlock: FC<VideoBlockProps> = ({ slice }) => {
           )}
         /> */}
 
-        {/* video */}
         <div className={clsx(MASK_CLASSES, "absolute inset-0")}>
-          <LazyYouTubePlayer youTubeID={slice.primary.youtube_video_id} />
+          {/* video */}
+          {/* <LazyYouTubePlayer youTubeID={slice.primary.youtube_video_id} /> */}
           {/* overlay */}
 
           <Image
