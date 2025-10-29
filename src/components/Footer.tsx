@@ -11,7 +11,7 @@ const Footer = async () => {
   const client = createClient();
   const settings = await client.getSingle("settings");
 
-  const boardTextureURLs = settings.data.footer_skateboards
+  const boardTextureURLs = settings.data?.footer_skateboards
     .map((item) => asImageSrc(item.skateboard, { h: 600 }))
     .filter((url): url is string => Boolean(url));
 
